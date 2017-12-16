@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimesAdd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id>1</id>
+  <s_id>1</s_id>
+  <b_id>287</b_id>
+  <leaving>2017-12-16T20:22:00</leaving>
+  <delay>5</delay>
+  <next_stop>0</next_stop>
+  <last_known_stop>0</last_known_stop>
+</TimesAdd>

@@ -95,6 +95,22 @@ namespace Mapper.SQLMapper
             return times;
         }
 
+        public static Collection<TimesAdd> GetTimesBackup()
+        {
+            Database db;
+            db = new Database();
+            db.Connect();
+
+            SqlCommand command = db.CreateCommand("select * from Times");
+            SqlDataReader reader = command.ExecuteReader();
+
+            Collection<TimesAdd> times = Read2(reader);
+            reader.Close();
+
+            db.Close();
+
+            return times;
+        }
 
         public static Collection<Times> GetTimes(int s_id)
         {

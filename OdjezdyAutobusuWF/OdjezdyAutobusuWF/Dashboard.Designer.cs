@@ -45,6 +45,7 @@
             this.odebratToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.zálohovatDoXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -111,19 +112,19 @@
             // přidatToolStripMenuItem
             // 
             this.přidatToolStripMenuItem.Name = "přidatToolStripMenuItem";
-            this.přidatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.přidatToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.přidatToolStripMenuItem.Text = "Přidat";
             // 
             // upravitToolStripMenuItem
             // 
             this.upravitToolStripMenuItem.Name = "upravitToolStripMenuItem";
-            this.upravitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.upravitToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.upravitToolStripMenuItem.Text = "Upravit";
             // 
             // odebratToolStripMenuItem
             // 
             this.odebratToolStripMenuItem.Name = "odebratToolStripMenuItem";
-            this.odebratToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.odebratToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.odebratToolStripMenuItem.Text = "Odebrat";
             // 
             // uživateléToolStripMenuItem
@@ -157,8 +158,11 @@
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zálohovatDoXMLToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(55, 20);
+            this.toolStripMenuItem1.Text = "Záloha";
             // 
             // dataGridView
             // 
@@ -168,6 +172,13 @@
             this.dataGridView.Size = new System.Drawing.Size(824, 437);
             this.dataGridView.TabIndex = 1;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            // 
+            // zálohovatDoXMLToolStripMenuItem
+            // 
+            this.zálohovatDoXMLToolStripMenuItem.Name = "zálohovatDoXMLToolStripMenuItem";
+            this.zálohovatDoXMLToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.zálohovatDoXMLToolStripMenuItem.Text = "Zálohovat do XML";
+            this.zálohovatDoXMLToolStripMenuItem.Click += new System.EventHandler(this.zálohovatDoXMLToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
@@ -209,5 +220,6 @@
         private System.Windows.Forms.ToolStripMenuItem odebratToolStripMenuItem1;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem zálohovatDoXMLToolStripMenuItem;
     }
 }
