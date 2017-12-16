@@ -1,0 +1,13 @@
+
+insert into Stops values (1,'Ostrava,Svinov,mosty dolní zast.')
+insert into Stops values (2,'Ostrava,Poruba,vozovna')
+insert into Stops values (3,'Ostrava,Pustkovec,Pustkovecká')
+insert into Stops values (4,'Velká Polom,aut.st.')
+insert into Stops values (5,'Velká Polom,støed')
+insert into Stops values (6,'Velká Polom,U Lihovaru')
+insert into Stops values (7,'Velká Polom,rozc.Hor.Lhota')
+insert into Stops values (8,'Horní Lhota,rozc.')
+insert into Stops values (9,'Horní Lhota,samoobsluha')
+insert into Stops values (10,'Kyjovice,rest.Zátiší')
+insert into Stops values (11,'Kyjovice,U Lípy')
+insert into Stops values (12,'Kyjovice,has.zbroj.')

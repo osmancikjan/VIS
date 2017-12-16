@@ -1,0 +1,12 @@
+C:\Users\Johnny\source\repos\Autobusy\Mapper\obj\Debug\Mapper.csprojResolveAssemblyReference.cache
+C:\Users\Johnny\source\repos\Autobusy\Mapper\obj\Debug\Mapper.csproj.CoreCompileInputs.cache
+C:\Users\Johnny\source\repos\Autobusy\Mapper\bin\Debug\Mapper.dll
+C:\Users\Johnny\source\repos\Autobusy\Mapper\bin\Debug\Mapper.pdb
+C:\Users\Johnny\source\repos\Autobusy\Mapper\obj\Debug\Mapper.dll
+C:\Users\Johnny\source\repos\Autobusy\Mapper\obj\Debug\Mapper.pdb
+C:\Users\Johnny\source\repos\OdejzdyAutobusu\Mapper\bin\Debug\Mapper.dll
+C:\Users\Johnny\source\repos\OdejzdyAutobusu\Mapper\bin\Debug\Mapper.pdb
+C:\Users\Johnny\source\repos\OdejzdyAutobusu\Mapper\obj\Debug\Mapper.csprojResolveAssemblyReference.cache
+C:\Users\Johnny\source\repos\OdejzdyAutobusu\Mapper\obj\Debug\Mapper.csproj.CoreCompileInputs.cache
+C:\Users\Johnny\source\repos\OdejzdyAutobusu\Mapper\obj\Debug\Mapper.dll
+C:\Users\Johnny\source\repos\OdejzdyAutobusu\Mapper\obj\Debug\Mapper.pdb

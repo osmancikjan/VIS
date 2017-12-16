@@ -1,0 +1,15 @@
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\bin\Debug\OdjezdyAutobusuWF.exe.config
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\bin\Debug\OdjezdyAutobusuWF.exe
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\bin\Debug\OdjezdyAutobusuWF.pdb
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\bin\Debug\Mapper.dll
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\bin\Debug\Mapper.pdb
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.csprojResolveAssemblyReference.cache
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.Dashboard.resources
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.Login.resources
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.Properties.Resources.resources
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.csproj.GenerateResource.Cache
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.csproj.CoreCompileInputs.cache
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.exe
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.pdb
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.AddUser.resources
+C:\Users\Johnny\source\repos\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.Zpozdeni.resources
