@@ -6,28 +6,22 @@
 
 <h2>Shedule</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.s_id)
+            Bus
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.b_id)
+            Směr
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.leaving)
+            Odjezd
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.delay)
+            Zpoždění
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.next_stop)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.last_known_stop)
+            Poslední známá poloha
         </th>
         <th></th>
     </tr>
@@ -35,10 +29,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.s_id)
+           <b> @Html.DisplayFor(modelItem => item.bus) </b>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.b_id)
+            @Html.DisplayFor(modelItem => item.last)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.leaving)
@@ -47,13 +41,9 @@
             @Html.DisplayFor(modelItem => item.delay)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.next_stop)
+            @Html.DisplayFor(modelItem => item.last_known)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.last_known_stop)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
         </td>
     </tr>
 }

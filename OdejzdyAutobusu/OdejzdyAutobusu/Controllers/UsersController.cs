@@ -28,7 +28,7 @@ namespace OdejzdyAutobusu.Controllers
         [HttpPost]
         public ActionResult Login(Models.Users user)
         {
-            var usr = Mapper.SQLMapper.UsersSQLMapper.Where(user.email, user.pwd).FirstOrDefault();
+            var usr = Mapper.SQLMapper.UsersSQLMapper.Role(user.email, user.pwd, 'U').FirstOrDefault();
             if (usr != null)
             {
                 Session["UserID"] = usr.id.ToString();

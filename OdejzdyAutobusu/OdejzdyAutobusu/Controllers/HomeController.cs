@@ -13,28 +13,24 @@ namespace OdejzdyAutobusu.Controllers
     {
         //public static Stops stopData = new Stops();
         //public static List<Models.Stops> stops = new List<Models.Stops>();
-        Models.Stops stops = new Models.Stops();
+        List<Stops> stops = new List<Stops>();
         public ActionResult Index()
         {
             return View();
         }
-
+        
         public ActionResult Stops()
         {
-            var som = StopsSQLMapper.GetStops();
-            foreach(var item in som)
-            {
-                stops.stops. item.id
-            }
-            
+            stops = StopsSQLMapper.GetStops().ToList();
+            ViewBag.zastavky = stops;
+
             return View();
         }
-
+        
         [HttpPost]
         public ActionResult Stops(Stops s)
         {
-            int id =
-            return RedirectToAction("Shedule", "Times", new { id = id });
+            return RedirectToAction("Shedule", "Times", new { stop = s.id});
         }
 
         public ActionResult Contact()

@@ -24,20 +24,10 @@ namespace Mapper.SQLMapper
     public class TimesSQLMapper
     {
         private static List<Times> times = new List<Times>();
-        /*
-         class TimesDG
-    {
-        string stop { get; set; }
-        int bus { get; set; }
-        string last { get; set; }
-        TimeSpan leaving { get; set; }
-        int delay { get; set; }
-        string last_known { get; set; }
-    }select s.sname, t.b_id, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id WHERE t.leaving >= GETDATE()
-             */
+
         private static string SQL_INSERT = "INSERT INTO Times VALUES (@id, @s_id, @b_id, @leaving, @delay, @next_stop, @last_known_stop)";
         private static string SQL_SINGLE_SELECT = "select TOP 10 s.sname, t.b_id, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id WHERE id = @id AND t.leaving >= GETDATE()";
-        private static string SQL_SELECT_SID = "select TOP 10 s.sname, t.b_id, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id WHERE s_id = @s_id AND t.leaving >= GETDATE()";
+        private static string SQL_SELECT_SID = "select TOP 10 t.b_id, s2.sname, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id LEFT JOIN Buses b ON b.number = t.b_id LEFT JOIN Stops s2 ON b.sto = s2.id WHERE s_id = @stop AND t.leaving >= GETDATE()";
         private static string SQL_UPDATE = "UPDATE Times SET leaving = @leaving, tdelay = @delay, next_stop = @next_stop, last_known_stop = @last_known_stop WHERE id = @id";
         private static string SQL_SELECT_FOR_UPDATE = "SELECT * FROM Times WHERE s_id = @s_id AND b_id = @b_id AND leaving = @leaving";
 
@@ -114,14 +104,14 @@ namespace Mapper.SQLMapper
             return times;
         }
 
-        public static Collection<Times> GetTimes(int s_id)
+        public static Collection<Times> GetTimes(int stop)
         {
             Database db;
             db = new Database();
             db.Connect();
 
             SqlCommand command = db.CreateCommand(SQL_SELECT_SID);
-            PrepareCommandSID(command, s_id);
+            PrepareCommandSID(command, stop);
             SqlDataReader reader = command.ExecuteReader();
 
             Collection<Times> times = Read(reader);
@@ -185,9 +175,9 @@ namespace Mapper.SQLMapper
             command.Parameters.AddWithValue("@next_stop", time.next_stop);
         }
 
-        private static void PrepareCommandSID(SqlCommand command, int s_id)
+        private static void PrepareCommandSID(SqlCommand command, int stop)
         {
-            command.Parameters.AddWithValue("@s_id", s_id);
+            command.Parameters.AddWithValue("@stop", stop);
         }
 
         private static void PrepareCommandID(SqlCommand command, int id)
@@ -213,7 +203,6 @@ namespace Mapper.SQLMapper
             {
                 int i = -1;
                 Times time = new Times();
-                time.stop = reader.GetString(++i);
                 time.bus = reader.GetInt32(++i);
                 time.last = reader.GetString(++i);
                 time.leaving = reader.GetDateTime(++i);

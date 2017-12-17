@@ -17,15 +17,15 @@ namespace OdejzdyAutobusu.Controllers
             return View();
         }
 
-     /*   public ActionResult Shedule()
+        public ActionResult Shedule()
         {
-            return View(times);
-        }*/
-        
-        public ActionResult Shedule(string id)
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Shedule(int stop)
         {
-            Int32 newId = Int32.Parse(id);
-            times = TimesSQLMapper.GetTimes(newId).ToList();
+            
+            times = TimesSQLMapper.GetTimes(stop).ToList();
 
             //ViewBag.times = times
             return View(times);
