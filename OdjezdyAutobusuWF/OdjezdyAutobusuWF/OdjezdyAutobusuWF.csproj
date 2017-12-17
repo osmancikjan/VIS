@@ -61,70 +61,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStop.cs">
+    <Compile Include="Forms\Stop\AddStop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStop.Designer.cs">
+    <Compile Include="Forms\Stop\AddStop.Designer.cs">
       <DependentUpon>AddStop.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddUser.cs">
+    <Compile Include="Forms\User\AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUser.Designer.cs">
+    <Compile Include="Forms\User\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backup.cs">
+    <Compile Include="Forms\Dash\Backup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Backup.Designer.cs">
+    <Compile Include="Forms\Dash\Backup.Designer.cs">
       <DependentUpon>Backup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Forms\Dash\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Forms\Dash\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\User\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Forms\User\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\SelectUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\SelectUser.Designer.cs">
+      <DependentUpon>SelectUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectStop.cs">
+    <Compile Include="Forms\Stop\SelectStop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectStop.Designer.cs">
+    <Compile Include="Forms\Stop\SelectStop.Designer.cs">
       <DependentUpon>SelectStop.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateStop.cs">
+    <Compile Include="Forms\Stop\UpdateStop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateStop.Designer.cs">
+    <Compile Include="Forms\Stop\UpdateStop.Designer.cs">
       <DependentUpon>UpdateStop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Zpozdeni.cs">
+    <Compile Include="Forms\Stop\Zpozdeni.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Zpozdeni.Designer.cs">
+    <Compile Include="Forms\Stop\Zpozdeni.Designer.cs">
       <DependentUpon>Zpozdeni.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddStop.resx">
+    <EmbeddedResource Include="Forms\Stop\AddStop.resx">
       <DependentUpon>AddStop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddUser.resx">
+    <EmbeddedResource Include="Forms\User\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Backup.resx">
+    <EmbeddedResource Include="Forms\Dash\Backup.resx">
       <DependentUpon>Backup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Forms\Dash\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Forms\User\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\SelectUser.resx">
+      <DependentUpon>SelectUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,13 +154,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SelectStop.resx">
+    <EmbeddedResource Include="Forms\Stop\SelectStop.resx">
       <DependentUpon>SelectStop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateStop.resx">
+    <EmbeddedResource Include="Forms\Stop\UpdateStop.resx">
       <DependentUpon>UpdateStop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Zpozdeni.resx">
+    <EmbeddedResource Include="Forms\Stop\Zpozdeni.resx">
       <DependentUpon>Zpozdeni.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

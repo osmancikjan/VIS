@@ -58,6 +58,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.select);
             this.Name = "SelectStop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectStop";
             this.ResumeLayout(false);
 

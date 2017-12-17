@@ -17,8 +17,7 @@ namespace Mapper.SQLMapper
         private static string SQL_SELECT_ROLE = "SELECT * FROM Users WHERE email = @email AND pwd = @pwd AND permision=@perm";
         private static string SQL_INSERT = "INSERT INTO Users VALUES (@id, @firstname, @lastname, @email, @pwd, @permision)";
         private static string SQL_SELECT = "SELECT * FROM Users";
-        private static string SQL_UPDATE = "UPDATE Users SET firstname = @firstname, lsatname=@lastname, email=@email, pwd=@pwd WHERE id=@id";
-        private static string SQL_SELECT_LOGIN = "SELECT * FROM Users WHERE email = @email AND pwd = @pwd";
+        private static string SQL_UPDATE = "UPDATE Users SET firstname = @firstname, lastname=@lastname, email=@email, pwd=@pwd, permision=@permision WHERE id=@id";
 
         // INSERT USER
         // -----------
@@ -89,7 +88,7 @@ namespace Mapper.SQLMapper
 
             SqlCommand command = db.CreateCommand(SQL_SINGLE_SELECT);
             PrepareCommand(command, id);
-            SqlDataReader reader = db.Select(command);
+            SqlDataReader reader = command.ExecuteReader();
 
             Collection<Users> users = Read(reader);
             reader.Close();

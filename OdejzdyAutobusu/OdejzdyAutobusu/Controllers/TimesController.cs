@@ -13,7 +13,7 @@ namespace OdejzdyAutobusu.Controllers
 {
     public class TimesController : Controller
     {
-        public static List<Times> times = new List<Times>();
+        public static List<Shedule> times = new List<Shedule>();
         // GET: Times
         public ActionResult Index()
         {
@@ -41,9 +41,9 @@ namespace OdejzdyAutobusu.Controllers
             using (StreamWriter sw = new StreamWriter(dir + Session["UserID"].ToString() + ".txt"))
             {
                 sw.WriteLine("Bus \t Smer \t \t \t Odjezd \t Zpozdeni \t Posledni pozice");
-                foreach (Times item in times)
+                foreach (Shedule item in times)
                 {
-                    sw.WriteLine(item.bus + "\t" + item.last + "\t" + item.leaving + "\t" + item.delay + "\t" + item.last_known);
+                    sw.WriteLine(item.bus + "\t" + item.busto + "\t" + item.time + "\t" + item.delay + "\t" + item.last_known);
                 }
             }
             return File(dir + Session["UserID"].ToString() + ".txt", "application\text", Session["UserID"].ToString()+".txt");

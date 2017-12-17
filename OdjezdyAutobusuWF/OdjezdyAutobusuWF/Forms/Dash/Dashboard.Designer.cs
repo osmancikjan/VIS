@@ -37,7 +37,6 @@
             this.uživateléToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.přidatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.upravitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.odebratToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.zálohovatDoXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
@@ -93,8 +92,7 @@
             // 
             this.uživateléToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.přidatToolStripMenuItem1,
-            this.upravitToolStripMenuItem1,
-            this.odebratToolStripMenuItem1});
+            this.upravitToolStripMenuItem1});
             this.uživateléToolStripMenuItem.Name = "uživateléToolStripMenuItem";
             this.uživateléToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.uživateléToolStripMenuItem.Text = "Uživatelé";
@@ -112,12 +110,6 @@
             this.upravitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.upravitToolStripMenuItem1.Text = "Upravit";
             this.upravitToolStripMenuItem1.Click += new System.EventHandler(this.upravitToolStripMenuItem1_Click);
-            // 
-            // odebratToolStripMenuItem1
-            // 
-            this.odebratToolStripMenuItem1.Name = "odebratToolStripMenuItem1";
-            this.odebratToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.odebratToolStripMenuItem1.Text = "Odebrat";
             // 
             // toolStripMenuItem1
             // 
@@ -187,7 +179,6 @@
         private System.Windows.Forms.ToolStripMenuItem uživateléToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem přidatToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem upravitToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem odebratToolStripMenuItem1;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem zálohovatDoXMLToolStripMenuItem;

@@ -32,3 +32,5 @@ C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\O
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.AddStop.resources
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.SelectStop.resources
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.UpdateStop.resources
+C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.SelectUser.resources
+C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.UpdateUser.resources

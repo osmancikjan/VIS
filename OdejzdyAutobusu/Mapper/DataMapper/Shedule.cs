@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OdejzdyAutobusu.Models
+namespace Mapper.DataMapper
 {
     public class Shedule
     {

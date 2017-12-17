@@ -104,7 +104,8 @@ namespace OdjezdyAutobusuWF
 
         private void upravitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            SelectUser su = new SelectUser();
+            su.Show();
         }
     }
 }

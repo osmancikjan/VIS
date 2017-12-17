@@ -105,7 +105,7 @@ namespace Mapper.SQLMapper
             return times;
         }
 
-        public static Collection<Times> GetTimes(int stop)
+        public static Collection<Shedule> GetTimes(int stop)
         {
             Database db;
             db = new Database();
@@ -115,7 +115,7 @@ namespace Mapper.SQLMapper
             PrepareCommandSID(command, stop);
             SqlDataReader reader = command.ExecuteReader();
 
-            Collection<Times> times = Read(reader);
+            Collection<Shedule> times = Read1(reader);
             reader.Close();
 
             db.Close();
@@ -208,6 +208,24 @@ namespace Mapper.SQLMapper
                 time.bus = reader.GetInt32(++i);
                 time.last = reader.GetString(++i);
                 time.leaving = reader.GetDateTime(++i);
+                time.delay = reader.GetInt32(++i);
+                time.last_known = reader.GetString(++i);
+                times.Add(time);
+            }
+            return times;
+        }
+
+        private static Collection<Shedule> Read1(SqlDataReader reader)
+        {
+            Collection<Shedule> times = new Collection<Shedule>();
+
+            while (reader.Read())
+            {
+                int i = -1;
+                Shedule time = new Shedule();
+                time.bus = reader.GetInt32(++i);
+                time.busto = reader.GetString(++i);
+                time.time = reader.GetDateTime(++i);
                 time.delay = reader.GetInt32(++i);
                 time.last_known = reader.GetString(++i);
                 times.Add(time);

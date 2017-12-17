@@ -26,7 +26,7 @@ namespace OdjezdyAutobusuWF
                 try
                 {
                     Stops s = new Stops();
-                    s.id = StopsSQLMapper.GetCount()+1;
+                    s.id = StopsSQLMapper.GetCount();
                     s.sname = stopName.Text;
                     StopsSQLMapper.Insert(s);
                     MessageBox.Show("Zastavka uspesne pridana.", "Hotovo", MessageBoxButtons.OK);

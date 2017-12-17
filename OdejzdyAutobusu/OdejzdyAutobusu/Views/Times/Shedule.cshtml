@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Mapper.DataMapper.Times>
+﻿@model IEnumerable<Mapper.DataMapper.Shedule>
 
 @{
     ViewBag.Title = "Shedule";
@@ -32,10 +32,10 @@
            <b> @Html.DisplayFor(modelItem => item.bus) </b>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.last)
+            @Html.DisplayFor(modelItem => item.busto)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.leaving)
+            @Html.DisplayFor(modelItem => item.time)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.delay)
@@ -50,5 +50,5 @@
 
 </table>
 <div>
-    @Html.ActionLink("Uložit ve formátu XML", "Download", "Times")
+    @Html.ActionLink("Uložit jako textový soubor (.txt)", "Download", "Times")
 </div>

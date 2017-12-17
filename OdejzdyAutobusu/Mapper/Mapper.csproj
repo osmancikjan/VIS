@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Database\Database.cs" />
     <Compile Include="DataMapper\Buses.cs" />
+    <Compile Include="DataMapper\Shedule.cs" />
     <Compile Include="DataMapper\Stops.cs" />
     <Compile Include="DataMapper\Times.cs" />
     <Compile Include="DataMapper\TimesAdd.cs" />
