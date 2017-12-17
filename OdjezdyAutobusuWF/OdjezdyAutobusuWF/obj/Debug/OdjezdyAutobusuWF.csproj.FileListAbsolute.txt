@@ -29,3 +29,6 @@ C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\O
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.exe
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.pdb
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.Backup.resources
+C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.AddStop.resources
+C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.SelectStop.resources
+C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.UpdateStop.resources

@@ -22,28 +22,35 @@ namespace OdjezdyAutobusuWF
 
         private void pridat_Click(object sender, EventArgs e)
         {
-            if(jmeno.Text == "" || prijmeni.Text == "" || email.Text == "" || heslo.Text == "")
+            if (jmeno.Text == "" || prijmeni.Text == "" || email.Text == "" || heslo.Text == "")
             {
                 MessageBox.Show("Chyba", "Pole jsou prazdna", MessageBoxButtons.OK);
             } else
             {
-                try
+                if (permision.Text.ToUpper() == "A" || permision.Text.ToUpper() == "D" || permision.Text.ToUpper() == "U")
                 {
-                    Users u = new Users();
-                    u.id = Int32.Parse(id.Text);
-                    u.firstname = jmeno.Text;
-                    u.lastname = prijmeni.Text;
-                    u.email = email.Text;
-                    u.pwd = heslo.Text;
-                    u.permision = permision.Text;
-                    UsersSQLMapper.Insert(u);
-                    MessageBox.Show("Uzivatel byl uspesne pridan", "Uspech", MessageBoxButtons.OK);
-                    this.Close();
-                } catch
+                    try
+                    {
+                        Users u = new Users();
+                        u.id = Int32.Parse(id.Text);
+                        u.firstname = jmeno.Text;
+                        u.lastname = prijmeni.Text;
+                        u.email = email.Text;
+                        u.pwd = heslo.Text;
+                        u.permision = permision.Text.ToUpper();
+                        UsersSQLMapper.Insert(u);
+                        MessageBox.Show("Uzivatel byl uspesne pridan", "Uspech", MessageBoxButtons.OK);
+                        this.Close();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ouha. Neco se pokazilo. Uzivatel nebyl pridan.", "Chyba", MessageBoxButtons.OK);
+                    }
+                } else
                 {
-                     MessageBox.Show("Ouha. Neco se pokazilo. Uzivatel nebyl pridan.", "Chyba", MessageBoxButtons.OK);
+                    MessageBox.Show("Ouha. Neco se pokazilo. Spatne permision. Pouzijte 'A' nebo 'D' nebo 'U'.", "Chyba", MessageBoxButtons.OK);
+
                 }
-                
             }
         }
     }

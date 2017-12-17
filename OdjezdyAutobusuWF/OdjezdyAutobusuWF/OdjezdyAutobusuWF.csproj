@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStop.Designer.cs">
+      <DependentUpon>AddStop.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,12 +93,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectStop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectStop.Designer.cs">
+      <DependentUpon>SelectStop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStop.Designer.cs">
+      <DependentUpon>UpdateStop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zpozdeni.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Zpozdeni.Designer.cs">
       <DependentUpon>Zpozdeni.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStop.resx">
+      <DependentUpon>AddStop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +136,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SelectStop.resx">
+      <DependentUpon>SelectStop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStop.resx">
+      <DependentUpon>UpdateStop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Zpozdeni.resx">
       <DependentUpon>Zpozdeni.cs</DependentUpon>
     </EmbeddedResource>

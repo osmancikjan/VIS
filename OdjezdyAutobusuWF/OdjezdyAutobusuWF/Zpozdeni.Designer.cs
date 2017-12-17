@@ -37,24 +37,28 @@
             this.zpozdeniMinut = new System.Windows.Forms.NumericUpDown();
             this.cisloBus = new System.Windows.Forms.ComboBox();
             this.potvrditZpozdeniButton = new System.Windows.Forms.Button();
+            this.nextStop = new System.Windows.Forms.ComboBox();
+            this.lastKnown = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.zpozdeniMinut)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker
             // 
             this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker.Location = new System.Drawing.Point(68, 34);
+            this.dateTimePicker.Location = new System.Drawing.Point(76, 34);
             this.dateTimePicker.MinDate = new System.DateTime(2017, 12, 16, 0, 0, 0, 0);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(204, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(196, 20);
             this.dateTimePicker.TabIndex = 0;
             // 
             // Zastavka
             // 
             this.Zastavka.FormattingEnabled = true;
-            this.Zastavka.Location = new System.Drawing.Point(68, 7);
+            this.Zastavka.Location = new System.Drawing.Point(76, 7);
             this.Zastavka.Name = "Zastavka";
-            this.Zastavka.Size = new System.Drawing.Size(204, 21);
+            this.Zastavka.Size = new System.Drawing.Size(196, 21);
             this.Zastavka.TabIndex = 1;
             // 
             // label1
@@ -118,11 +122,50 @@
             this.potvrditZpozdeniButton.UseVisualStyleBackColor = true;
             this.potvrditZpozdeniButton.Click += new System.EventHandler(this.potvrditZpozdeniButton_Click);
             // 
+            // nextStop
+            // 
+            this.nextStop.FormattingEnabled = true;
+            this.nextStop.Location = new System.Drawing.Point(76, 118);
+            this.nextStop.Name = "nextStop";
+            this.nextStop.Size = new System.Drawing.Size(195, 21);
+            this.nextStop.TabIndex = 12;
+            // 
+            // lastKnown
+            // 
+            this.lastKnown.FormattingEnabled = true;
+            this.lastKnown.Location = new System.Drawing.Point(76, 145);
+            this.lastKnown.Name = "lastKnown";
+            this.lastKnown.Size = new System.Drawing.Size(195, 21);
+            this.lastKnown.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "next stop";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 148);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "last known";
+            // 
             // Zpozdeni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lastKnown);
+            this.Controls.Add(this.nextStop);
             this.Controls.Add(this.potvrditZpozdeniButton);
             this.Controls.Add(this.cisloBus);
             this.Controls.Add(this.zpozdeniMinut);
@@ -133,6 +176,7 @@
             this.Controls.Add(this.Zastavka);
             this.Controls.Add(this.dateTimePicker);
             this.Name = "Zpozdeni";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zpozdeni";
             ((System.ComponentModel.ISupportInitialize)(this.zpozdeniMinut)).EndInit();
             this.ResumeLayout(false);
@@ -151,5 +195,9 @@
         private System.Windows.Forms.NumericUpDown zpozdeniMinut;
         private System.Windows.Forms.ComboBox cisloBus;
         private System.Windows.Forms.Button potvrditZpozdeniButton;
+        private System.Windows.Forms.ComboBox nextStop;
+        private System.Windows.Forms.ComboBox lastKnown;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

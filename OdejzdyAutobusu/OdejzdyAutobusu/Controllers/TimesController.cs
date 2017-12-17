@@ -2,15 +2,18 @@
 using Mapper.SQLMapper;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace OdejzdyAutobusu.Controllers
 {
     public class TimesController : Controller
     {
-        List<Times> times = new List<Times>();
+        public static List<Times> times = new List<Times>();
         // GET: Times
         public ActionResult Index()
         {
@@ -29,6 +32,21 @@ namespace OdejzdyAutobusu.Controllers
 
             //ViewBag.times = times
             return View(times);
+        }
+        [HttpGet]
+        public FileResult Download()
+        {
+            var dir = new System.IO.DirectoryInfo(Server.MapPath("~/App_Data/Users/"));
+            // XmlDocument doc = new XmlDocument();
+            using (StreamWriter sw = new StreamWriter(dir + Session["UserID"].ToString() + ".txt"))
+            {
+                sw.WriteLine("Bus \t Smer \t \t \t Odjezd \t Zpozdeni \t Posledni pozice");
+                foreach (Times item in times)
+                {
+                    sw.WriteLine(item.bus + "\t" + item.last + "\t" + item.leaving + "\t" + item.delay + "\t" + item.last_known);
+                }
+            }
+            return File(dir + Session["UserID"].ToString() + ".txt", "application\text", Session["UserID"].ToString()+".txt");
         }
     }
 }

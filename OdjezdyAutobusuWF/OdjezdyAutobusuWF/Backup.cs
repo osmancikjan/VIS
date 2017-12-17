@@ -1,4 +1,5 @@
-﻿using Mapper.SQLMapper;
+﻿using Mapper.DataMapper;
+using Mapper.SQLMapper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

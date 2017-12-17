@@ -13,8 +13,8 @@ namespace Mapper.SQLMapper
         private static List<Times> times = new List<Times>();
 
         private static string SQL_INSERT = "INSERT INTO Times VALUES (@id, @s_id, @b_id, @leaving, @delay, @next_stop, @last_known_stop)";
-        private static string SQL_SINGLE_SELECT = "select TOP 10 s.sname, t.b_id, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id WHERE id = @id AND t.leaving >= GETDATE()";
-        private static string SQL_SELECT_SID = "select TOP 10 t.b_id, s2.sname, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id LEFT JOIN Buses b ON b.number = t.b_id LEFT JOIN Stops s2 ON b.sto = s2.id WHERE s_id = @stop AND t.leaving >= GETDATE()";
+        private static string SQL_SINGLE_SELECT = "select TOP 10 s.sname, t.b_id, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id WHERE id = @id AND t.leaving >= GETDATE() ORDER BY leaving";
+        private static string SQL_SELECT_SID = "select TOP 10 t.b_id, s2.sname, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id LEFT JOIN Buses b ON b.number = t.b_id LEFT JOIN Stops s2 ON b.sto = s2.id WHERE s_id = @stop AND t.leaving >= GETDATE() ORDER BY leaving";
         private static string SQL_UPDATE = "UPDATE Times SET leaving = @leaving, tdelay = @delay, next_stop = @next_stop, last_known_stop = @last_known_stop WHERE id = @id";
         private static string SQL_SELECT_FOR_UPDATE = "SELECT * FROM Times WHERE s_id = @s_id AND b_id = @b_id AND leaving = @leaving";
 
@@ -63,7 +63,7 @@ namespace Mapper.SQLMapper
             db = new Database();
             db.Connect();
 
-            SqlCommand command = db.CreateCommand("select TOP 20 s.sname, t.b_id, s2.sname, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id LEFT JOIN Buses b ON b.number = t.b_id JOIN Stops s2 ON s2.id = b.sto");
+            SqlCommand command = db.CreateCommand("select TOP 20 s.sname, t.b_id, s2.sname, t.leaving, t.tdelay, s1.sname from Times t LEFT JOIN Stops s ON t.s_id = s.id LEFT JOIN Stops s1 ON t.last_known_stop = s1.id LEFT JOIN Buses b ON b.number = t.b_id JOIN Stops s2 ON s2.id = b.sto WHERE t.leaving >= GETDATE() ORDER BY leaving");
             SqlDataReader reader = command.ExecuteReader();
 
             Collection<Times> times = Read(reader);
@@ -72,6 +72,20 @@ namespace Mapper.SQLMapper
             db.Close();
 
             return times;
+        }
+
+        public static int GetCount()
+        {
+            Database db;
+            db = new Database();
+            db.Connect();
+
+            SqlCommand command = db.CreateCommand("SELECT COUNT(*) FROM Times");
+            Int32 res = (Int32)command.ExecuteScalar();
+
+            db.Close();
+
+            return res;
         }
 
         public static Collection<TimesAdd> GetTimesBackup()
@@ -190,6 +204,7 @@ namespace Mapper.SQLMapper
             {
                 int i = -1;
                 Times time = new Times();
+                time.stop = reader.GetString(++i);
                 time.bus = reader.GetInt32(++i);
                 time.last = reader.GetString(++i);
                 time.leaving = reader.GetDateTime(++i);

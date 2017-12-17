@@ -34,12 +34,27 @@ namespace OdjezdyAutobusuWF
                     {
                         Dashboard dash = new Dashboard();
                         dash.Show();
-                        //this.Close();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Chyba", "Nesprávný email nebo heslo.", MessageBoxButtons.OK);
+                    List<Users> input2 = UsersSQLMapper.Role(emailTextBox.Text, passwordTextBox.Text, 'D').ToList();
+                    if (input2.Count > 0)
+                    {
+                        if (input2.First().email != emailTextBox.Text && input2.First().pwd != passwordTextBox.Text)
+                        {
+                            MessageBox.Show("Chyba", "Nesprávný email nebo heslo.", MessageBoxButtons.OK);
+                        }
+                        else
+                        {
+                            Dashboard dash = new Dashboard('D');
+                            dash.Show();
+                        }
+                    } 
+                    else
+                    {
+                        MessageBox.Show("Chyba", "Nesprávný email nebo heslo.", MessageBoxButtons.OK);
+                    }
                 }
             }
             else

@@ -31,6 +31,20 @@ namespace OdjezdyAutobusuWF
             loadDataToGridView();
         }
 
+        public Dashboard(char permision)
+        {
+            InitializeComponent();
+            if(permision == 'D')
+            {
+                zastávkyToolStripMenuItem.Enabled = true;
+                uživateléToolStripMenuItem.Enabled = false;
+                nováZastávkaToolStripMenuItem.Enabled = false;
+                upravitZastávkuToolStripMenuItem.Enabled = false;
+            }
+            
+            loadDataToGridView();
+        }
+
         [XmlArray("Times"), XmlArrayItem(typeof(Times), ElementName = "Time")]
         private List<Times> all = new List<Times>();
 
@@ -64,6 +78,33 @@ namespace OdjezdyAutobusuWF
         {
             Backup bp = new Backup();
             bp.Show();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            loadDataToGridView();
+        }
+
+        private void nováZastávkaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStop AS = new AddStop();
+            AS.Show();
+        }
+
+        private void upravitZastávkuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectStop ss = new SelectStop();
+            ss.Show();
+        }
+
+        private void upravitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

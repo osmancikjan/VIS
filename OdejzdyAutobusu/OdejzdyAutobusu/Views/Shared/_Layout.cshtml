@@ -22,15 +22,17 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Domů", "Index", "Home")</li>
+
                     @if (Session["email"] != null)
                     {
-                <li>@Html.ActionLink("Zastávky", "Stops", "Home")</li>
-                <li>@Html.ActionLink("Logout", "Logout", "Users")</li>
+                        <li>@Html.ActionLink("Zastávky", "Stops", "Home")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Users")</li>
                     }
                     else
                     {
-                <li>@Html.ActionLink("Login", "Login", "Users")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Users")</li>
                     }
+
                 </ul>
             </div>
         </div>

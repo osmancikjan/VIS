@@ -1,0 +1,4 @@
+Bus 	 Smer 	 	 	 Odjezd 	 Zpozdeni 	 Posledni pozice
+287	Kyjovice,has.zbroj.	24.12.2017 12:12:00	20	Svinov, nádraží
+287	Kyjovice,has.zbroj.	24.12.2017 13:13:00	2	Svinov, nádraží
+287	Kyjovice,has.zbroj.	24.12.2017 14:14:00	2	Svinov, nádraží
