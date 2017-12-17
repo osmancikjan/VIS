@@ -46,12 +46,16 @@
     <Compile Include="DataMapper\Buses.cs" />
     <Compile Include="DataMapper\Stops.cs" />
     <Compile Include="DataMapper\Times.cs" />
+    <Compile Include="DataMapper\TimesAdd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataMapper\Users.cs" />
     <Compile Include="SQLMapper\BusesSQLMapper.cs" />
     <Compile Include="SQLMapper\StopsSQLMapper.cs" />
     <Compile Include="SQLMapper\TimesSQLMapper.cs" />
     <Compile Include="SQLMapper\UsersSQLMapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

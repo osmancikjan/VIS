@@ -11,12 +11,10 @@ namespace Mapper.SQLMapper
     {
         private static List<Stops> stops = new List<Stops>();
 
-        public static string SQL_INSERT = "INSERT INTO Stops VALUES (@id, @name)";
-        public static string SQL_SINGLE_SELECT = "SELECT * FROM Stops WHERE id = @id";
-        public static string SQL_SELECT = "SELECT * FROM Stops";
-        public static string SQL_UPDATE = "UPDATE Stops SET sname = @sname WHERE id=@id";
-
-        public static List<Stops> Stops { get => stops; set => stops = value; }
+        private static string SQL_INSERT = "INSERT INTO Stops VALUES (@id, @name)";
+        private static string SQL_SINGLE_SELECT = "SELECT * FROM Stops WHERE id = @id";
+        private static string SQL_SELECT = "SELECT * FROM Stops";
+        private static string SQL_UPDATE = "UPDATE Stops SET sname = @sname WHERE id=@id";
 
         // INSERT STOP
         // -----------

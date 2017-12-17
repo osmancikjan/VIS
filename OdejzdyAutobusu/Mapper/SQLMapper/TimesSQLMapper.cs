@@ -8,19 +8,6 @@ using System.Xml.Serialization;
 
 namespace Mapper.SQLMapper
 {
-    [XmlRoot("Times")]
-    public class TimesAdd
-    {
-        
-        public int id { get; set; }
-        public int s_id { get; set; }
-        public int b_id { get; set; }
-        public DateTime leaving { get; set; }
-        public int delay { get; set; }
-        public int next_stop { get; set; }
-        public int last_known_stop { get; set; }
-    }
-
     public class TimesSQLMapper
     {
         private static List<Times> times = new List<Times>();

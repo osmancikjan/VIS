@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mapper.DB.Database">
+    <Position X="8.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABKABAAAECAAAEAMAAAAAAAAAAAAAAQACAAAA=</HashCode>
+      <FileName>Database\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.DataMapper.Buses">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAACAgAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapper\Buses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.DataMapper.Stops">
+    <Position X="6.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAgA=</HashCode>
+      <FileName>DataMapper\Stops.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.DataMapper.Times">
+    <Position X="6.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAIgAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>DataMapper\Times.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.DataMapper.Users">
+    <Position X="6.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAhAAAAgAAAAAAAAAAAAgAAAAAAAAACAAgA=</HashCode>
+      <FileName>DataMapper\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.SQLMapper.BusesSQLMapper">
+    <Position X="2.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAQCAECAAAQgAAAAAAAAAgAgAAAAAQAAAAIAAAAAAgA=</HashCode>
+      <FileName>SQLMapper\BusesSQLMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.SQLMapper.StopsSQLMapper">
+    <Position X="2.25" Y="9.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBCECAAQQgAAAAAAAAAgAgAAAAAQAAAAAAABAAAAA=</HashCode>
+      <FileName>SQLMapper\StopsSQLMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.SQLMapper.TimesAdd">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAABAAAAgAAAgAAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>SQLMapper\TimesSQLMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.SQLMapper.TimesSQLMapper">
+    <Position X="2.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ASQgAkCgAAQAAAAAAgAAQgAgAgAAATAAAAAIAAAAAAA=</HashCode>
+      <FileName>SQLMapper\TimesSQLMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.SQLMapper.UsersSQLMapper">
+    <Position X="2.25" Y="13.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAGCAAAQgAAAAEAAAAgAgAAAAAQAAEAAAAAAADAA=</HashCode>
+      <FileName>SQLMapper\UsersSQLMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

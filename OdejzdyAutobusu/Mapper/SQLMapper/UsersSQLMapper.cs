@@ -13,14 +13,12 @@ namespace Mapper.SQLMapper
     {
         private static List<Users> users = new List<Users>();
 
-        public static string SQL_SINGLE_SELECT = "SELECT * FROM Users WHERE id = @id";
-        public static string SQL_SELECT_ROLE = "SELECT * FROM Users WHERE email = @email AND pwd = @pwd AND permision=@perm";
-        public static string SQL_INSERT = "INSERT INTO Users VALUES (@id, @firstname, @lastname, @email, @pwd, @permision)";
-        public static string SQL_SELECT = "SELECT * FROM Users";
-        public static string SQL_UPDATE = "UPDATE Users SET firstname = @firstname, lsatname=@lastname, email=@email, pwd=@pwd WHERE id=@id";
-        public static string SQL_SELECT_LOGIN = "SELECT * FROM Users WHERE email = @email AND pwd = @pwd";
-
-        public static List<Users> Users { get => users; set => users = value; }
+        private static string SQL_SINGLE_SELECT = "SELECT * FROM Users WHERE id = @id";
+        private static string SQL_SELECT_ROLE = "SELECT * FROM Users WHERE email = @email AND pwd = @pwd AND permision=@perm";
+        private static string SQL_INSERT = "INSERT INTO Users VALUES (@id, @firstname, @lastname, @email, @pwd, @permision)";
+        private static string SQL_SELECT = "SELECT * FROM Users";
+        private static string SQL_UPDATE = "UPDATE Users SET firstname = @firstname, lsatname=@lastname, email=@email, pwd=@pwd WHERE id=@id";
+        private static string SQL_SELECT_LOGIN = "SELECT * FROM Users WHERE email = @email AND pwd = @pwd";
 
         // INSERT USER
         // -----------
