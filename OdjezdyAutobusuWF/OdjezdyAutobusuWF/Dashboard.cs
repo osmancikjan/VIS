@@ -20,6 +20,7 @@ namespace OdjezdyAutobusuWF
 {
     public partial class Dashboard : Form
     {
+        
         public Dashboard()
         {
             /*Login l = new Login();
@@ -29,6 +30,9 @@ namespace OdjezdyAutobusuWF
             InitializeComponent();
             loadDataToGridView();
         }
+
+        [XmlArray("Times"), XmlArrayItem(typeof(Times), ElementName = "Time")]
+        private List<Times> all = new List<Times>();
 
         private void přidatZpožděníToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,53 +62,8 @@ namespace OdjezdyAutobusuWF
 
         private void zálohovatDoXMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = "../";
-            List<TimesAdd> all = TimesSQLMapper.GetTimesBackup().ToList();
-            var xml = new XElement("Times", all.Select(x => new XElement("Time",
-                                       new XAttribute("ID", x.id),
-                                       new XAttribute("SID", x.s_id),
-                                       new XAttribute("BID", x.b_id),
-                                       new XAttribute("Leaving", x.leaving),
-                                       new XAttribute("Delay", x.delay),
-                                       new XAttribute("NextStop", x.next_stop),
-                                       new XAttribute("LastKnownStop", x.last_known_stop))));
-
-            foreach (var item in all)
-            {
-                Save<TimesAdd>(item, path + "/new.xml");
-            }
-            
-            //File.Create(path + "zaloha.xml");
-            StreamWriter sw = File.CreateText(path + "zaloha.xml");
-            
-                
-                XmlTextWriter xtw = new XmlTextWriter(sw);
-
-                xtw.WriteStartElement("Times");
-            foreach (var item in all)
-            {
-                xtw.WriteElementString("id", item.id.ToString());
-                xtw.WriteElementString("s_id", item.s_id.ToString());
-                xtw.WriteElementString("b_id", item.b_id.ToString());
-                xtw.WriteElementString("leaving", item.leaving.ToString());
-                xtw.WriteElementString("tdelay", item.delay.ToString());
-                xtw.WriteElementString("next_stop", item.next_stop.ToString());
-                xtw.WriteElementString("last_known_stop", item.last_known_stop.ToString());
-            }
-            xtw.Close();
-            
-            MessageBox.Show("Uspech", "Zaloha byla uspesne vytvorena. Cesta k souboru je: " + path, MessageBoxButtons.OK);
-
+            Backup bp = new Backup();
+            bp.Show();
         }
-        public void Save<T>(T file, String path)
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
-
-            using (StreamWriter writer = new StreamWriter(path))
-            {
-                serializer.Serialize(writer, file);
-            }
-        }
-       
     }
 }

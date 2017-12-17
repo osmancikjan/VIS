@@ -7,7 +7,6 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 
-
 namespace Mapper.SQLMapper
 {
     public class UsersSQLMapper
@@ -102,27 +101,6 @@ namespace Mapper.SQLMapper
             return users;
         }
 
-        // GET USER by ID
-        // --------------
-
-     /*   public static Collection<Users> Where(string email, string pwd)
-        {
-            Database db;
-            db = new Database();
-            db.Connect();
-
-            SqlCommand command = db.CreateCommand(SQL_SELECT_LOGIN);
-            PrepareCommand(command, email, pwd);
-            SqlDataReader reader = command.ExecuteReader();
-
-            Collection<Users> users = Read(reader);
-            reader.Close();
-
-            db.Close();
-
-            return users;
-        }*/
-
         public static Collection<Users> Role(string email, string pwd, char perm)
         {
             Database db;
@@ -202,17 +180,5 @@ namespace Mapper.SQLMapper
 
             return res;
         }
-
-        // MD5 Crypt
-        // ---------
-/*
-        private static string MD5Hash(string input)
-        {
-            using (var md5 = MD5.Create())
-            {
-                var result = md5.ComputeHash(Encoding.ASCII.GetBytes(input));
-                return Encoding.ASCII.GetString(result);
-            }
-        }*/
     }
 }

@@ -28,3 +28,4 @@ C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\O
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.csproj.CoreCompileInputs.cache
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.exe
 C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.pdb
+C:\Users\Johnny\source\repos\VIS\OdjezdyAutobusuWF\OdjezdyAutobusuWF\obj\Debug\OdjezdyAutobusuWF.Backup.resources

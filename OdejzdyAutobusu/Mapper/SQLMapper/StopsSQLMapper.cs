@@ -3,7 +3,7 @@ using Mapper.DataMapper;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.SqlClient;
-
+using System;
 
 namespace Mapper.SQLMapper
 {
@@ -53,6 +53,20 @@ namespace Mapper.SQLMapper
             db.Close();
 
             return ret;
+        }
+
+        public static int GetCount()
+        {
+            Database db;
+            db = new Database();
+            db.Connect();
+
+            SqlCommand command = db.CreateCommand("SELECT COUNT(*) FROM Stops");
+            Int32 res = (Int32)command.ExecuteScalar();
+
+            db.Close();
+
+            return res;
         }
 
         // GET ALL STOPS

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 namespace Mapper.DataMapper
 {
+    
     public class Times
     {
         public string stop { get; set; }

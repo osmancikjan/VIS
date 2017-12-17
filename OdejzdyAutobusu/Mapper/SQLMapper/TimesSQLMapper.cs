@@ -4,12 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.SqlClient;
-
+using System.Xml.Serialization;
 
 namespace Mapper.SQLMapper
 {
+    [XmlRoot("Times")]
     public class TimesAdd
     {
+        
         public int id { get; set; }
         public int s_id { get; set; }
         public int b_id { get; set; }
